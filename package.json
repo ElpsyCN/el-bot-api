@@ -1,0 +1,26 @@
+{
+  "name": "el-bot-api",
+  "version": "1.0.0",
+  "description": "此处提供一些 el-bot 及其插件的相关 API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 你在教我做事？"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElpsyCN/el-bot-api.git"
+  },
+  "author": {
+    "name": "YunYouJun",
+    "url": "https://www.yunyoujun.cn",
+    "email": "me@yunyoujun.cn"
+  },
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ElpsyCN/el-bot-api/issues"
+  },
+  "homepage": "https://github.com/ElpsyCN/el-bot-api#readme",
+  "devDependencies": {
+    "@vercel/node": "^1.7.1"
+  }
+}
