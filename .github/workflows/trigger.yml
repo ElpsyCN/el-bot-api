@@ -1,0 +1,19 @@
+name: trigger
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: trigger YunYouJun/el-bot-api
+        run: |
+          curl \
+            -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/YunYouJun/el-bot-api/dispatches \
+            -H 'Authorization: Bearer ${{ secrets.YUNYOUJUN_ACCESS_TOKEN }}' \
+            -d '{"event_type":"trigger-sync-fork-to-deploy"}'

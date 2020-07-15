@@ -1,0 +1,18 @@
+name: Sync fork and Deploy
+on: repository_dispatch
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: pull
+        run: |
+          git fetch upstream
+          git merge upstream/master
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
