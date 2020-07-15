@@ -1,4 +1,4 @@
-name: Sync fork and Deploy
+name: Sync fork
 on: repository_dispatch
 jobs:
   sync_fork:
@@ -8,7 +8,7 @@ jobs:
         with:
           submodules: true
 
-      - name: pull
+      - name: fetch
         run: |
           git remote add upstream https://github.com/ElpsyCN/el-bot-api.git
           git fetch upstream
