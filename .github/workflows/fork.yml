@@ -1,7 +1,7 @@
 name: Sync fork and Deploy
 on: repository_dispatch
 jobs:
-  deploy:
+  sync_fork:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -10,6 +10,7 @@ jobs:
 
       - name: pull
         run: |
+          git remote add upstream https://github.com/ElpsyCN/el-bot-api.git
           git fetch upstream
           git merge upstream/master
       - name: Push changes
