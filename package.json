@@ -4,7 +4,7 @@
   "description": "此处提供一些 el-bot 及其插件的相关 API",
   "main": "index.js",
   "scripts": {
-    "start": "vercel dev",
+    "serve": "vercel dev",
     "test": "echo 你在教我做事？"
   },
   "repository": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ElpsyCN/el-bot-api#readme",
   "devDependencies": {
-    "@vercel/node": "^1.7.1"
+    "@vercel/node": "^1.7.1",
+    "vercel": "^19.2.0"
   }
 }
