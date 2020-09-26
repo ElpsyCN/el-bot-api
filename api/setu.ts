@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@vercel/node';
+import { NowRequest, NowResponse } from "@vercel/node";
 import setu from "../data/setu.json";
 
 export default (req: NowRequest, res: NowResponse) => {

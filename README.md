@@ -16,11 +16,15 @@ El bot 机器人相关的通用 API，使用 [Vercel](https://vercel.com/) 搭�
 
 ## API
 
-| Name  | Description | API                                       |
-| ----- | ----------- | ----------------------------------------- |
-| niubi | 随机牛逼话  | <https://el-bot-api.vercel.app/api/niubi> |
-| setu  | 随机色图    | <https://el-bot-api.vercel.app/api/setu>  |
-| wanan | 随机晚安话  | <https://el-bot-api.vercel.app/api/wanan> |
+> 为保持逻辑统一，niubi / wanan 等随机句子统一移动到 words 目录下。
+
+| Name    | Description | API                                               |
+| ------- | ----------- | ------------------------------------------------- |
+| setu    | 随机色图    | <https://el-bot-api.vercel.app/api/setu>          |
+| niubi   | 随机牛逼话  | <https://el-bot-api.vercel.app/api/words/niubi>   |
+| wanan   | 随机晚安话  | <https://el-bot-api.vercel.app/api/words/wanan>   |
+| young   | 大老师语录  | <https://el-bot-api.vercel.app/api/words/young>   |
+| aoligei | 正能量语录  | <https://el-bot-api.vercel.app/api/words/aoligei> |
 
 ## Dev
 
