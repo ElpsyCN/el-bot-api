@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ElpsyCN/el-bot-api#readme",
   "devDependencies": {
-    "@vercel/node": "^1.7.1",
-    "vercel": "^19.2.0"
+    "@vercel/node": "^1.9.1",
+    "vercel": "^21.3.3"
   }
 }
