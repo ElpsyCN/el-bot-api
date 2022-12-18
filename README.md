@@ -2,9 +2,7 @@
 
 El bot 机器人相关的通用 API，使用 [Vercel](https://vercel.com/) 搭建。
 
-> 每次更新后，触发 [YunYouJun/el-bot-api](https://github.com/YunYouJun/el-bot-api) 部署。
-
-[Limits - Vercel](https://vercel.com/docs/v2/platform/limits)
+> 请合理合规使用。[Limits - Vercel](https://vercel.com/docs/v2/platform/limits)
 
 - API: <https://el-bot-api.vercel.app/api>
 - Example: <https://el-bot-api.vercel.app/api/setu>

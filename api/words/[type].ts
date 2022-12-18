@@ -1,4 +1,4 @@
-import { VercelRequest, VercelResponse } from "@vercel/node";
+import type { VercelRequest, VercelResponse } from '@vercel/node'
 
 /**
  * 渲染字符串
@@ -7,7 +7,8 @@ import { VercelRequest, VercelResponse } from "@vercel/node";
  * @param name
  */
 function renderString(template: string, data: any, name: string) {
-  return Function(name, "return `" + template + "`")(data);
+  // eslint-disable-next-line no-new-func
+  return Function(name, `return \`${template}\``)(data)
 }
 
 /**
@@ -16,20 +17,19 @@ function renderString(template: string, data: any, name: string) {
  * @param data
  */
 function adapter(req: VercelRequest, data: any): string {
-  const index = Math.floor(Math.random() * data.length);
+  const index = Math.floor(Math.random() * data.length)
 
   // for niubi
-  if (req.query.name) {
-    data[index] = renderString(data[index], req.query.name, "name");
-  }
+  if (req.query.name)
+    data[index] = renderString(data[index], req.query.name, 'name')
 
-  return data[index];
+  return data[index]
 }
 
-export default (req: VercelRequest, res: VercelResponse) => {
-  const type = req.query.type;
-  const words = require(`../../data/${type}.json`);
-  const word = adapter(req, words);
+export default async (req: VercelRequest, res: VercelResponse) => {
+  const type = req.query.type
+  const words = await import(`../../data/${type}.json`)
+  const word = adapter(req, words)
 
-  res.json([word]);
-};
+  res.json([word])
+}
