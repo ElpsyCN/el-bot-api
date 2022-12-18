@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from "@vercel/node";
+import { VercelRequest, VercelResponse } from "@vercel/node";
 
 /**
  * 渲染字符串
@@ -15,7 +15,7 @@ function renderString(template: string, data: any, name: string) {
  * @param req
  * @param data
  */
-function adapter(req: NowRequest, data: any): string {
+function adapter(req: VercelRequest, data: any): string {
   const index = Math.floor(Math.random() * data.length);
 
   // for niubi
@@ -26,7 +26,7 @@ function adapter(req: NowRequest, data: any): string {
   return data[index];
 }
 
-export default (req: NowRequest, res: NowResponse) => {
+export default (req: VercelRequest, res: VercelResponse) => {
   const type = req.query.type;
   const words = require(`../../data/${type}.json`);
   const word = adapter(req, words);

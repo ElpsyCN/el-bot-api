@@ -9,6 +9,11 @@ El bot 机器人相关的通用 API，使用 [Vercel](https://vercel.com/) 搭�
 - API: <https://el-bot-api.vercel.app/api>
 - Example: <https://el-bot-api.vercel.app/api/setu>
 
+## Domains
+
+- Vercel: <https://el-bot-api.vercel.app>
+- Custom: <https://el-bot-api.elpsy.cn>
+
 ## 相关
 
 - [el-bot](https://github.com/ElpsyCN/el-bot/)

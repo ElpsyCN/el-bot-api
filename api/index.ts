@@ -1,6 +1,6 @@
-import { NowRequest, NowResponse } from "@vercel/node";
+import { VercelRequest, VercelResponse } from "@vercel/node";
 import pkg from "../package.json";
 
-export default (req: NowRequest, res: NowResponse) => {
+export default (req: VercelRequest, res: VercelResponse) => {
   res.json(pkg);
 };
