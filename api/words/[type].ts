@@ -28,7 +28,7 @@ function adapter(req: VercelRequest, data: any): string {
 
 export default async (req: VercelRequest, res: VercelResponse) => {
   const type = req.query.type
-  const words = await import(`../../data/${type}.json`)
+  const words = (await import(`../../data/${type}.json`)).default
   const word = adapter(req, words)
 
   res.json([word])
